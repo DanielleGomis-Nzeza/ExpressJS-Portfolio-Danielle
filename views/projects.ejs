@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title with dynamic/moving  insertion of page-specific title -->
+    <title><%= title %> | My Portfolio</title>
+    
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Include header partial for consistent navigation -->
+    <%- include('partials/header') %>
+
+    <!-- Main content section for Projects -->
+    <div class="container mt-5">
+        <!-- Projects Heading -->
+        <h2 class="text-center mb-5">My Projects</h2>
+
+        <!-- Project Grid using Bootstrap's Grid system -->
+        <div class="row">
+            <!-- Project 1 Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-light rounded">
+                    <img src="/images/download1.jpg" class="card-img-top passport-size" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1 <i class="fas fa-cogs"></i></h5>
+                        <p class="card-text">A brief description of this exciting project. It involves cutting-edge technology and creative solutions.</p>
+                        <!-- Button to trigger Project 1 Modal -->
+                        <a href="#" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#project1Modal">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-light rounded">
+                    <img src="/images/download2.jpg" class="card-img-top passport-size" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2 <i class="fas fa-laptop-code"></i></h5>
+                        <p class="card-text">Another brief description of a project showcasing my skills in front-end development and user experience design.</p>
+                        <!-- Button to trigger Project 2 Modal -->
+                        <a href="#" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#project2Modal">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-light rounded">
+                    <img src="/images/download3.jpg" class="card-img-top passport-size" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3 <i class="fas fa-paint-brush"></i></h5>
+                        <p class="card-text">A visually stunning design project that combines art with functionality to create beautiful user interfaces.</p>
+                        <!-- Button to trigger Project 3 Modal -->
+                        <a href="#" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#project3Modal">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 1 Modal -->
+    <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project1ModalLabel">Snake Game Project</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Description: I built a Snake game using Python and Pygame as a personal project to get more familiar with Python while doing something I enjoy. In the game, you control a snake that eats food to grow longer, but you must avoid hitting the walls or the snake’s own body.</p> 
+                    <p>Skills Used: Python, Pygame, and Visual Studio Code.</p>
+                    <p>Challenges: Since this was my first time developing a game by myself, I ran into a lot of challenges. Luckily, I had many resources to help me through any errors step by step. I learned how to track the snake’s position and handle collisions, which was quite a learning experience.</p>
+                    <p>Outcome: The game turned out great! It features smooth controls, a scoring system, and a restart option. This project not only helped me practice Python but also taught me the basics of game development.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal So basically I explain the Simple calulator project -->
+    <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project2ModalLabel">Simple Calculator</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Description:  I made a simple calculator for my Introduction to Programming class using Python in Jupyter Notebook. The calculator can do basic math like addition, subtraction, multiplication, and division.</p>
+                    <p>Skills Used: Python and Jupyter Notebook.</p>
+                    <p>Challenges:My main challenge was that the calculator gave incorrect results after I inputted an operation. I couldn’t find the problem at first, but I went back through the code and, thanks to my comments, I was able to find and fix the bug.</p>
+                    <p>Outcome: After fixing the issues, the calculator worked perfectly and gave accurate results. This project helped me strengthen my programming skills and learn how to troubleshoot problems.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal  Here is explain the last project which was the guess the word game-->
+    <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="project3ModalLabel">Guess the Word Game</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Description: I created a simple "Guess the Word" game using Python in Visual Studio Code. In this game, a word is scrambled, and the player has three guesses to get the correct word.</p>
+                    <p>Skills Used: Python and Visual Studio Code.</p>
+                    <p>Challenges: My main challenge was that the calculator gave incorrect results after I inputted an operation. I couldn’t find the problem at first, but I went back through the code and, thanks to my comments, I was able to find and fix the bug.</p>
+                    <p>Outcome:  The game now works smoothly, allowing three guesses and properly counting each entry. This project helped me practice handling game logic and learning how to manage user input the right way.
+                     </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include footer partial for consistent footer across pages -->
+    <%- include('partials/footer') %>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

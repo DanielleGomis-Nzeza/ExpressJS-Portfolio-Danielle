@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | My Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css"> <!-- Link to your custom CSS -->
+</head>
+<body>
+    <header class="bg-primary text-white text-center p-4">
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/contact">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <%- body %> <!-- This is where the content of each page will be injected -->
+    </main>
+
+    <footer class="bg-light text-center p-3 mt-4">
+        <p>Connect with me on 
+            <a href="https://github.com/your-github" target="_blank">GitHub</a> | 
+            <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
